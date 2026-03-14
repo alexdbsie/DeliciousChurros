@@ -6,7 +6,7 @@ class Churros
     public string Flavour { get; private set; }
     public double Price { get; private set; }
 
-    public Churros(string Flavour, double price)
+    public Churros(string flavour, double price)
     {
         Flavour = flavour;
         Price = price;
@@ -47,5 +47,42 @@ class Order
     public void collect_order()
     {
         Console.WriteLine($"\n  Order #{order_no} is ready — enjoy your Churros!");
+    }
+}
+
+class Program
+{
+    static List<Churros> menu = new List<Churros>
+    {
+        new Churros("Churros with plain sugar",     6.00),
+        new Churros("Churros with cinnamon sugar",  6.00),
+        new Churros("Churros with chocolate sauce", 8.00),
+        new Churros("Churros with Nutella",         8.00)
+    };
+
+    static Queue<Order> orderQueue = new Queue<Order>();
+
+    static void Main(string[] args)
+    {
+        bool running = true;
+        while (running)
+        {
+            Console.WriteLine("\n--------------------------------------------------");
+            Console.WriteLine("              Delicious Churros");
+            Console.WriteLine("--------------------------------------------------");
+            for (int i = 0; i < menu.Count; i++)
+                Console.WriteLine($"  {i + 1}. {menu[i].Flavour}: €{menu[i].Price:F2}");
+
+            Console.WriteLine("\n  1. Place order");
+            Console.WriteLine("  2. Deliver order");
+            Console.WriteLine("  0. Exit");
+            Console.Write("\nEnter choice: ");
+
+            switch (Console.ReadLine())
+            {
+                case "0": running = false; Console.WriteLine("\n  Goodbye!"); break;
+                default:  Console.WriteLine("  Coming soon."); break;
+            }
+        }
     }
 }
