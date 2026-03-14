@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DeliciousChurros")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5259ac748b74263e32a6e7284a6f957eb1fb7cc7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a871351b91ce7e8141ce20ec5269cd1a9f334814")]
 [assembly: System.Reflection.AssemblyProductAttribute("DeliciousChurros")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DeliciousChurros")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
